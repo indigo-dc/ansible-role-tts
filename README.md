@@ -1,7 +1,7 @@
 Token Translation Service Role
 ==============================
 
-Configure and start the (TTS)[https://github.com/indigo-dc/tts].
+Configure and start the [TTS](https://github.com/indigo-dc/tts).
 
 This role has been specifically developed to be used for the deployment of the TTS in the framework of the INDIGO-DataCloud project.
 
@@ -19,7 +19,7 @@ Requirements
 Example Playbook
 ----------------
 
-See (sample/test.yml)[https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml].
+See [sample/test.yml](https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml).
 
 License
 -------
