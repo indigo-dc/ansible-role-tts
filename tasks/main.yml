@@ -1,0 +1,43 @@
+---
+- name: Download/Install TTS for Ubuntu package
+  apt:
+    deb: "{{ deb_get_url }}"
+    state: present
+  notify:
+    - restart TTS
+  when: ansible_pkg_mgr == "apt"
+
+- name: Download/Install TTS for CentOS package
+  yum:
+    name: "{{ rpm_get_url }}"
+    state: present
+  notify:
+    - restart TTS
+  when: ansible_pkg_mgr == "yum"
+
+
+- name: Create configuration directory
+  file:
+    state: directory
+    path: "{{ config_dir }}/{{ item }}"
+  with_items:
+    - oidc
+    - scripts
+    - services
+
+- name: Copy configuration files
+  template:
+      src: "{{ item }}"
+      dest: "{{ config_dir }}/{{ item }}"
+  with_items:
+    - main.conf
+    - oidc/google.conf
+    - oidc/iam.conf
+    - scripts/idh-single-user.py
+    - scripts/ssh.py
+    - services/ssh.conf
+  notify:
+    - restart TTS
+
+- name: Start TTS
+  command: /usr/local/bin/tts start
