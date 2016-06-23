@@ -1,0 +1,13 @@
+---
+- name: Setup TTS on all TTS servers
+  hosts: tts-server
+  remote_user: ansible
+  become_user: root
+  become: yes
+
+  roles:
+    - role: ansible-role-tts
+      # This is my personal local webserver, we should use a more sensible
+      # default in defaults/main.yml
+      deb_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.deb"
+      rpm_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.rpm"
