@@ -1,5 +1,6 @@
 ---
-# TODO This should be done with the service module
 - name: restart TTS
-  command: /usr/local/bin/tts restart
+  service:
+    name: tts
+    state: restarted
 

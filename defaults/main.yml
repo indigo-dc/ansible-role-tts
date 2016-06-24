@@ -1,1 +1,2 @@
 config_dir: "/etc/tts"
+start_at_boot: no

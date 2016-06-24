@@ -44,5 +44,9 @@
   notify:
     - restart TTS
 
+
 - name: Start TTS
-  command: /usr/local/bin/tts start
+  service:
+    name: tts
+    state: started
+    enabled: "{{ start_at_boot }}"

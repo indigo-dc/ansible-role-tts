@@ -11,3 +11,4 @@
       # default in defaults/main.yml
       deb_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.deb"
       rpm_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.rpm"
+      start_at_boot: yes

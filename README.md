@@ -11,7 +11,8 @@ Role Variables
  - `config_dir` (default `"/etc/tts"`) Where to put configuration
  - `deb_get_url` (required) Where to get the Ubuntu package from
  - `rpm_get_url` (required) Where to get the CentOS package from
-
+ - `start_at_boot` (default: `no`) Whether to enable the TTS to be started at boot
+ 
 Requirements
 ------------
  - *CentOS 7* or *Ubuntu 14.04 LTS* on the nodes are explicily supported
