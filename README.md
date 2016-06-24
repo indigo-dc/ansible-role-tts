@@ -20,17 +20,27 @@ Requirements
 Example Playbook
 ----------------
 
-### By cloning this repo
-See [sample/test.yml](https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml).
-
-### By using `ansible-galaxy(1)` (coming soon)
-```yaml
-- hosts: tts-server
-  roles:
-    - indigo-dc.tts
-      deb_get_url: "http://example.org/tts.deb"
-      rpm_get_url: "http://example.org/tts.rpm"
-```
+ - Install the role
+   - From the repo:
+   
+     ```sh
+      # ansible-galaxy install -r sample/requirements.yml
+     ```
+   - Using the official vault (coming soon):
+   
+     ```sh
+      # ansible-galaxy install indigo-dc.tts
+      ```
+ - Try it out:
+ 
+   ```yaml
+   - hosts: tts-server
+      roles:
+      - indigo-dc.tts
+        deb_get_url: "http://example.org/tts.deb"
+        rpm_get_url: "http://example.org/tts.rpm"
+   ```
+   See also: [sample/test.yml](https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml).
 
 License
 -------
@@ -38,4 +48,3 @@ License
 Apache Licence v2 [1]
 
 [1]: http://www.apache.org/licenses/LICENSE-2.0
-

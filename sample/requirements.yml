@@ -1,0 +1,3 @@
+- src: https://github.com/indigo-dc/ansible-role-tts
+  name: indigo-dc.tts
+
