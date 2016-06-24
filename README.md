@@ -15,7 +15,7 @@ Role Variables
 Requirements
 ------------
  - *CentOS 7* or *Ubuntu 14.04 LTS* on the nodes are explicily supported
- - Anything using *yum*+*systemd* or *apt*+*upstart* will should also be fine
+ - Anything using *yum*+*systemd* or *apt*+*upstart* should also be fine
 
 Example Playbook
 ----------------
@@ -28,6 +28,8 @@ See [sample/test.yml](https://github.com/indigo-dc/ansible-role-tts/tree/master/
 - hosts: tts-server
   roles:
     - indigo-dc.tts
+      deb_get_url: "http://example.org/tts.deb"
+      rpm_get_url: "http://example.org/tts.rpm"
 ```
 
 License
