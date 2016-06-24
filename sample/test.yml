@@ -1,6 +1,6 @@
 ---
 - name: Setup TTS on all TTS servers
-  hosts: tts-server
+  hosts: centos ubuntu
   remote_user: ansible
   become_user: root
   become: yes

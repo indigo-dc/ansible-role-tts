@@ -3,6 +3,8 @@
 # ssh-agent or an entry in ~/.ssh/config). The user 'ansible' has to be able to
 # 'su root' without a password or with the password 'foo'.
 
-[tts-server]
-tts[0:2].local.scc.kit.edu ansible_become_pass=foo
-tts[10:12].local.scc.kit.edu ansible_become_pass=foo
+[centos]
+tts[0:3].local.scc.kit.edu ansible_become_pass=foo
+
+[ubuntu]
+tts[10:13].local.scc.kit.edu ansible_become_pass=foo
