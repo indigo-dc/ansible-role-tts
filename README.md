@@ -41,6 +41,14 @@ Example Playbook
         deb_get_url: "http://example.org/tts.deb"
         rpm_get_url: "http://example.org/tts.rpm"
    ```
+
+   ```sh
+    $ ansible-playbook sample/test.yml --inventory=sample/inventory
+   ```
+   Of course, you will need to adapt
+   [sample/inventory](https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml)
+   according to your needs, or leave the `--inventory` option out and use the default `/etc/ansible/hosts`.
+
    See also: [sample/test.yml](https://github.com/indigo-dc/ansible-role-tts/tree/master/sample/test.yml).
 
 License
