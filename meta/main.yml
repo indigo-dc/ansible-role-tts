@@ -9,6 +9,6 @@
       - name: Ubuntu
         versions:
           - trusty
-      - name: CentOS
+      - name: EL
         versions:
           - 7
