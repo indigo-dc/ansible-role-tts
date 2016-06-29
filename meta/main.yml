@@ -1,14 +1,20 @@
-  galaxy_info:
-    author: uwdkl@student.kit.edu
-    owner: indigo-dc
-    description: Install tts
-    company: INDIGO-DataCloud
-    license: Apache
-    min_ansible_version: 2.0
-    platforms:
-      - name: Ubuntu
-        versions:
-          - trusty
-      - name: EL
-        versions:
-          - 7
+galaxy_info:
+  author: uwdkl@student.kit.edu
+  owner: indigo-dc
+  description: Install tts
+  company: INDIGO-DataCloud
+  license: Apache
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - authentication
+    - authorization
+    - tts
+
+dependencies: []
