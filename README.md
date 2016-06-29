@@ -27,12 +27,12 @@ Example Playbook
      ```sh
       # ansible-galaxy install -r sample/requirements.yml
      ```
-   - Using the official vault (coming soon):
+   - Using the official vault:
    
      ```sh
       # ansible-galaxy install indigo-dc.tts
-      ```
- - Try it out:
+     ```
+ - Give it a try:
  
    ```yaml
    - hosts: tts-server
@@ -42,7 +42,7 @@ Example Playbook
         rpm_get_url: "http://example.org/tts.rpm"
    ```
 
-   and then run it. E.g., using the provided sample playbook:
+   Then you can run it, e.g. using the provided sample playbook:
 
    ```sh
     $ ansible-playbook sample/test.yml --inventory=sample/inventory
