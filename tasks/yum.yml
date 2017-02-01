@@ -1,0 +1,16 @@
+---
+- name: Uninstall WaTTS for CentOS package
+  yum:
+    name: tts
+    state: absent
+  when: rpm_get_url is defined
+
+- name: Download/Install WaTTS for CentOS package
+  yum:
+    name: "{{ rpm_get_url }}"
+    state: present
+    validate_certs: no
+  notify:
+    - Restart WaTTS
+  when: rpm_get_url is defined
+

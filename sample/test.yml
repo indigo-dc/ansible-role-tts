@@ -7,8 +7,6 @@
 
   roles:
     - role: indigo-dc.tts
-      # This is my personal local webserver, we should use a more sensible
-      # default in defaults/main.yml
-      deb_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.deb"
-      rpm_get_url: "http://quark.local.scc.kit.edu:8080/tts-latest.rpm"
+      deb_get_url: "https://jenkins.indigo-datacloud.eu:8080/job/tts-packaging/platform=bubuntu14/lastStableBuild/artifact/UBUNTU/tts_1.0.0-1f0bcd24-1_amd64.deb"
+      rpm_get_url: "https://jenkins.indigo-datacloud.eu:8080/job/tts-packaging/platform=bcentos7/lastStableBuild/artifact/RPMS/tts-1.0.0.1f0bcd24-1.el7.centos.x86_64.rpm"
       start_at_boot: yes

@@ -1,5 +1,5 @@
 ---
-- name: restart TTS
+- name: Restart WaTTS
   service:
-    name: tts
+    name: watts
     state: restarted
