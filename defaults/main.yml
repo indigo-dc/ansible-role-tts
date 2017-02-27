@@ -1,4 +1,3 @@
-config_dir: "/etc/tts"
 start_at_boot: no
 
 indigo_repo: "http://repo.indigo-datacloud.eu"

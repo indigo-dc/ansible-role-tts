@@ -1,30 +1,6 @@
 ---
 - include: "{{ ansible_pkg_mgr }}.yml"
 
-- name: Create configuration directory
-  file:
-    state: directory
-    path: "{{ config_dir }}/{{ item }}"
-  with_items:
-    - oidc
-    - scripts
-    - services
-
-- name: Copy configuration files
-  template:
-      src: "{{ item }}"
-      dest: "{{ config_dir }}/{{ item }}"
-  with_items:
-    - main.conf
-    - oidc/google.conf
-    - oidc/iam.conf
-    - scripts/idh-single-user.py
-    - scripts/ssh.py
-    - services/ssh.conf
-  notify:
-    - Restart WaTTS
-
-
 - name: Start WaTTS
   service:
     name: "{{ watts_service_name }}"
