@@ -3,6 +3,7 @@ start_at_boot: no
 
 indigo_repo: "http://repo.indigo-datacloud.eu"
 indigo_centos_repo_url: "{{ indigo_repo }}/repos/1/indigo1.repo"
+indigo_ubuntu_repo_url: "{{ indigo_repo }}/repos/1/indigo1-ubuntu14_04.list"
 indigo_pgp_key_url: "{{ indigo_repo }}/repository/RPM-GPG-KEY-indigodc"
 
 watts_pkg_name: "tts"
