@@ -1,5 +1,5 @@
 ---
 - name: Restart WaTTS
   service:
-    name: watts
+    name: "{{ watts_service_name }}"
     state: restarted

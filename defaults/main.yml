@@ -1,2 +1,4 @@
 config_dir: "/etc/tts"
 start_at_boot: no
+
+watts_service_name: "watts"
