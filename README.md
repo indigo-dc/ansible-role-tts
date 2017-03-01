@@ -1,17 +1,17 @@
 Token Translation Service Role
 ==============================
 
-Configure and start the [TTS](https://github.com/indigo-dc/tts).
+Configure and start the [WaTTS](https://github.com/indigo-dc/tts).
 
-This role has been specifically developed to be used for the deployment of the *TTS* in the framework of the *INDIGO-DataCloud* project.
+This role has been specifically developed to be used for the deployment of the *WaTTS* in the framework of the *INDIGO-DataCloud* project.
 
 Role Variables
 --------------
 
- - `config_dir` (default `"/etc/tts"`) Where to put configuration
+ - `config_dir` (default `"/etc/watts"`) Where to put configuration
  - `deb_get_url` (required) Where to get the Ubuntu package from
  - `rpm_get_url` (required) Where to get the CentOS package from
- - `start_at_boot` (default: `no`) Whether to enable the TTS to be started at boot
+ - `start_at_boot` (default: `no`) Whether to enable the WaTTS to be started at boot
  
 Requirements
 ------------

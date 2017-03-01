@@ -1,7 +1,7 @@
 galaxy_info:
   author: uwdkl@student.kit.edu
   owner: indigo-dc
-  description: Install tts
+  description: Install WaTTS
   company: INDIGO-DataCloud
   license: Apache
   min_ansible_version: 2.0

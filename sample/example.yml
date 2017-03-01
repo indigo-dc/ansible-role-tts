@@ -1,5 +1,5 @@
 ---
-- name: Setup TTS on all TTS servers
+- name: Setup WaTTS on all servers
   hosts: centos ubuntu
   remote_user: ansible
   become_user: root
