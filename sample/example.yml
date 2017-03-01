@@ -8,3 +8,10 @@
   roles:
     - role: indigo-dc.tts
       start_at_boot: yes
+
+  tasks:
+    - name: Create a self-signed TLS certificate
+      command: openssl req -new -nodes -x509 -subj "/C=DE/ST=BW/L=Karlsruhe/O=KIT/CN={{ansible_nodename}}" -keyout /etc/watts/watts.key -out /etc/watts/watts.crt creates=/etc/watts/watts.crt
+      notify:
+        - Restart WaTTS
+    # Other stuff, like deploying configuration
