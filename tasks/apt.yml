@@ -8,12 +8,16 @@
     validate_certs: no
   when: deb_get_url is defined
 
+- name: Uninstall WaTTS for Ubuntu package
+  apt:
+    name: "{{ watts_pkg_name }}"
+    state: absent
+
 - block:
     - name: Install WaTTS for Ubuntu package
       apt:
         deb: "~/watts-latest.deb"
         state: present
-        force: yes
       notify:
         - Restart WaTTS
       when: deb_get_url is defined
