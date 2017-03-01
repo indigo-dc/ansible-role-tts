@@ -4,7 +4,7 @@
 # 'su root' without a password or with the password 'foo'.
 
 [centos]
-tts[0:3].local.scc.kit.edu ansible_become_pass=foo
+watts[0:3].example.org ansible_become_pass=foo
 
 [ubuntu]
-tts[10:13].local.scc.kit.edu ansible_become_pass=foo
+watts[10:13].example.org ansible_become_pass=foo
