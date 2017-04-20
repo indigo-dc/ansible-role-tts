@@ -12,6 +12,7 @@
   apt:
     name: "{{ watts_pkg_name }}"
     state: absent
+  when: deb_get_url is defined
 
 - block:
     - name: Install WaTTS for Ubuntu package
