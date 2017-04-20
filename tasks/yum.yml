@@ -15,19 +15,6 @@
   when: rpm_get_url is defined
 
 
-- name: Add INDIGO-DC CentOS 7 repository
-  get_url:
-    url: "{{ indigo_centos_repo_url }}"
-    dest: "/etc/yum.repos.d"
-  when: rpm_get_url is undefined
-  register: yum_repo
-
-- name: Install INDIGO public PGP key over HTTP (yes you heard right)
-  get_url:
-    url: "{{ indigo_pgp_key_url }}"
-    dest: "/etc/pki/rpm-gpg"
-  when: rpm_get_url is undefined
-
 - name: Install WaTTS package
   yum:
     name: "{{ watts_pkg_name }}"

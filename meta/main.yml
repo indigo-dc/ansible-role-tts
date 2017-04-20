@@ -9,6 +9,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - trusty
+        - xenial
     - name: EL
       versions:
         - 7
@@ -18,4 +19,8 @@ galaxy_info:
     - tts
     - WaTTS
 
-dependencies: []
+dependencies:
+  - role: joshuabach.indigo-repo  # TODO See: https://github.com/indigo-dc/ansible-role-indigo-repo/pull/1
+    indigo_release: 2
+    enable_openstack_distro_repo: false
+    when: (ansible_pkg_mgr == 'yum' and rpm_get_url is undefined) or (ansible_pkg_mgr == 'apt' and deb_get_url is undefined)
